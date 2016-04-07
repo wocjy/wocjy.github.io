@@ -1,0 +1,404 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>我的最爱</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="css/channel.css"/>
+    <link rel="stylesheet" type="text/css" href="css/guideani.css"/>
+    <link rel="stylesheet" type="text/css" href="css/qrcode.css"/>
+    <link rel="stylesheet" type="text/css" href="css/query.css"/>
+</head>
+<body>
+<div class="gpuon"></div>
+
+<section id="page-main" class="page-wrap">
+    <section id="page-head-nav">
+        <a href="javascript:;" pname="changeskin" class="setting" tabindex="-1">设置</a>
+    </section>
+
+    <div id="page-list">
+        <div id="icon-nav" class="inner-page" page="0">
+            <div class="con-wrap-ws-nav" style="visibility: hidden">
+                <div class="wrap-nav-border">
+                    <div class="wrap-nav"></div>
+                </div>
+                <div class="page-foot-nav page-foot-nav2">
+                    <ul class="page-switch-tab" name="page-switch-tab">
+                        <li page="0">我的最爱</li>
+                        <li page="1" class="on">常用网址</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div id="most-visited" class="inner-page" page="1">
+            <div class="con-wrap" style="">
+                <div class="sub-wrap">
+                    <div id="search-bar" style="">
+                        <div id="widget-search">
+                            <ul class="search-type">
+                                <li sp-data="2" class="on">网页</li>
+                                <li sp-data="5">音乐</li>
+                                <li sp-data="7">视频</li>
+                                <li sp-data="6">图片</li>
+                                <li sp-data="3">知道</li>
+                                <li sp-data="4">淘宝</li>
+                                <li sp-data="8">地图</li>
+                            </ul>
+                            <div class="search-engine more sogou" sp-data="sogou">
+                                <ul class="three balloon">
+                                    <li sp-data="sogou"><a class="search-engine-item" href="javascript:void(0)">搜狗<span class="search-selected"></span></a></li>
+                                    <li sp-data="baidu"><a class="search-engine-item" href="javascript:void(0)">百度<span></span></a></li>
+                                    <li sp-data="google"><a class="search-engine-item" href="javascript:void(0)">谷歌<span></span></a></li>
+                                </ul>
+                                <span class="more-btn"></span>
+                            </div>
+                            <div class="search-input">
+                                <form id="sf" name="sf" class="m_sf" method="get" action="http://vulture.mse.sogou.com/so">
+                                    <input type="text" name="wd" id="query" class="search_input" maxlength="100" autocomplete="off" />
+                                    <input type="submit" class="stb" id="stb" value="搜索" />
+                                    <input type="hidden" name="cat" id="search_s" value="2"/>
+                                    <input type="hidden" name="engine" id="search_id" value="sogou"/>
+                                    <!--<span class="hw_tri"></span>-->
+                                </form>
+                                <ul id="sugmaindivname" class="suggmain"></ul>
+                            </div>
+                        </div>
+                        <!--<div id="hot-words"></div>-->
+                    </div>
+                    <div class="div-border-shadow">
+                        <!--<div class="div-border">-->
+                        <!--<div class="tile-ul-bg"></div>-->
+                        <ul id="tile-grid"></ul>
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="page-foot-nav page-foot-nav1">
+                    <ul id="page-switch-tab" class="page-switch-tab" name="page-switch-tab">
+                        <li page="0" class="on">我的最爱</li>
+                        <li page="1">常用网址</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="foreward-btn" class="ward-btn">
+        <div class="arrow-btn"></div>
+    </div>
+    <div id="backward-btn" class="ward-btn">
+        <div class="arrow-btn"></div>
+    </div>
+
+    <div id="page-footer" class="page-footer">
+        <ul id="page-switch" class="page-switch" name="page-switch">
+            <li page="0" >我的最爱</li>
+            <li page="1">常用网址</li>
+        </ul>
+    </div>
+
+    <div id="setting-popup" class="balloon hide">
+        <div class="setting-wrap">
+            <span class="setting-title">背景主题</span>
+            <ul class="img-bg">
+                <li bgurl="custom" class="custom"><img class="custom-add" src="./img/top_nav/add_bg.png"/><div class="img-bg-mask"></div></li>
+            </ul>
+
+            <div class="newtab">
+                <label id="open-in-newtab"><input type="checkbox"/><span> 点击网址格后，在新标签页中打开</span></label>
+                <label id="receive-push"><input type="checkbox"/><span> 开启云推送背景</span></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="page-reading" class="page-wrap sbar" tabindex="-1">
+    <div id="private-reading" class="">
+        <div class="p-r-wrap">
+            <div class="p-r-header">
+                <div class="p-r-header-des"></div>
+            </div>
+            <div class="p-r-nav-wrap">
+                <div class="p-r-nav">
+                    <ul class="p-r-nav-ul">
+                        <li class="p-r-nav-li sele" data-name="首页">首页</li>
+                    </ul>
+                    <span class="p-r-nav-more">全部</span>
+                    <p class="channel-hint-des" id="channel-hint-des">
+                        <span class="hint-des">这里有更多有趣的频道哦~</span>
+                        <span class="hint-clos clos">x</span>
+                        <span class="hint-icon"></span>
+                    </p>
+                </div>
+                <div class="p-r-channel">
+                    <div class="p-r-channel-list"></div>
+
+                    <span class="p-r-channel-tri"></span>
+                    <div class="p-r-channel-footer">
+                        <div class="footer-edit">
+                            <div class="footer-tips" data-tipb='点击"保存"或"取消"退出编辑' data-tipa='亲，可点击或拖动来自定义导航栏'>亲，可点击或拖动来自定义导航栏</div>
+                            <div class="footer-ops">
+                                <span id="ops-cancel" class="ops-cancel">取消</span>
+                                <span id="ops-save" class="ops-save">保存</span>
+                            </div>
+                        </div>
+                        <div class="footer-normal">设置导航栏</div>
+                    </div>
+                    <p class="channel-hint-des edit-hint-des" id="edit-hint-des">
+                        <span class="hint-des edit-des">点击定制自己的导航栏~</span>
+                        <span class="hint-clos edit-clos clos">x</span>
+                        <span class="hint-icon edit-icon"></span>
+                    </p>
+                </div>
+
+            </div>
+            <div id="p-r-bd-wrap">
+                <div class="p-r-loading">
+                    <p>正在加载中</p>
+                </div>
+                <div class="p-r-err">
+                    <p>获取失败，<a href="javascript:;" class="reload-btn">点击重新加载</a></p>
+                </div>
+                <div class="p-r-nr">
+                    <p class="p-r-nr-des">有<span class="p-r-nr-count"></span>条新推荐，点击查看</p>
+                </div>
+                <div class="p-r-bd">
+                </div>
+                <div id="p-r-ft">
+                    <div class="ft-loading">
+                        <p>正在加载中</p>
+                    </div>
+                    <div class="ft-end">
+                        <p>矮油，都看完了呢，去别的频道看看！</p>
+                    </div>
+                    <div class="ft-err">
+                        <p>获取失败，<a href="javascript:;" class="reload-btn">点击重新加载</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide" id="selection-reading">
+        <div class="s-r-wrap">
+            <div class="s-r-header">
+                <div class="s-r-header-des"></div>
+            </div>
+            <div id="s-r-bd-wrap">
+                <div class="s-r-loading">
+                    <p class="">正在加载中</p>
+                </div>
+                <div class="s-r-err">
+                    <p>获取失败，<a href="javascript:;" class="reload-btn">点击重新加载</a></p>
+                </div>
+                <div class="s-r-bd">
+                </div>
+                <div id="s-r-ft">
+                    <div class="ft-loading">
+                        <p>正在加载中</p>
+                    </div>
+                    <div class="ft-end">
+                        <p>矮油，都看完了呢，去别的频道看看！</p>
+                    </div>
+                    <div class="ft-err">
+                        <p>获取失败，<a href="javascript:;" class="reload-btn">点击重新加载</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="s-r-2top" class="to-top" href="javascript:;"></a>
+    <div class="guide-ani-wrap invisible" id="guide-ani-wrap">
+        <div class="guide-canvas">
+            <div class="guide-progress">
+                <p class="g-p">
+                    <span class="g-s-des">正在计算你的个性化数据</span>
+                    <span class="g-s-percent">0</span>%
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="reading-detail">
+    <div class="r-d-wrap sbar" tabindex="-1">
+        <span class="r-d-close"></span>
+        <a id="r-d-2top" class="to-top" href="javascript:;"></a>
+        <div class="item-btn item-btn-pre">
+            <div class="item-btn-table">
+                <p class="go-detail"></p>
+            </div>
+        </div>
+        <div class="item-btn item-btn-next">
+            <div class="item-btn-table">
+                <p class="go-detail"></p>
+            </div>
+        </div>
+        <div class="r-d-bd">
+            <div class="r-d-main">
+            </div>
+            <div class="r-d-reco">
+                <p class="reco-des">相关阅读推荐</p>
+                <ul class="reco-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="nav-list">
+    <ul>
+        <li class="nav-li" data-tab="0">
+            <span>常用网址</span>
+        </li>
+        <li class="nav-li" data-tab="1">
+            <span>我的最爱</span>
+        </li>
+        <li class="nav-li" data-tab="2">
+            <span>今日要看</span>
+            <div>
+                <p class="reading-hint-dot" id="reading-hint-dot"></p>
+                <p class="reading-hint-des" id="reading-hint-des" data-guide="false">
+                    <span id="hint-des">为您量身打造的阅读空间快去体验吧！</span>
+                    <span id="hint-clos">x</span>
+                    <span class="hint-icon"></span>
+                </p>
+            </div>
+
+        </li>
+        <li class="nav-li" data-tab="3">
+            <span>精选文章</span>
+        </li>
+    </ul>
+</section>
+
+<!--<section id="QR-hint" class="QR-hint">
+    <div id="QR-dog" class="QR-dog">
+        <div class="dog-eye">
+            <span class="dog-eye-left"></span>
+            <span class="dog-eye-right"></span>
+        </div>
+        <div class="dog-mouth"></div>
+        <div class="dog-heart-area">
+            <span class="dog-heart"></span>
+            <span class="dog-heart"></span>
+            <span class="dog-heart"></span>
+        </div>
+    </div>
+    <div class="QR-content">
+        <p class="QR-des" data-normal="手机看新闻&lt;/br&gt;头条不错过" data-active="扫描二维码&lt;/br&gt;下载安卓客户端">
+            手机看新闻</br>头条不错过
+        </p>
+        <div id="QR-code" class="QR-code"></div>
+        <div class="QR-dot"><p></p></div>
+        <div class="QR-dot bottom"><p></p></div>
+    </div>
+</section>-->
+
+<div id="we-overlay" style="display: none">
+    <div class="we-outer">
+        <div class="we-wrap">
+            <div class="we-op-area">
+                <ul class="we-op-btn">
+                    <li class="op-btn-item cur">热门推荐</li>
+                    <li class="op-btn-item">自定义添加</li>
+                </ul>
+                <span class="we-clos" title="关闭">x</span>
+                <div class="we-search-bar">
+                    <span class="we-search-icon"></span>
+                    <input type="search" id="hsSearch" placeholder="查找热门网站"/>
+                </div>
+            </div>
+            <div class="we-con-area">
+                <div class="we-con-item we-hot-ws">
+                    <ul class="we-hot-classify">
+                        <li class="hot-classify-li cl1"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">名站</a></li>
+                        <li class="hot-classify-li cl2"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">新闻资讯</a></li>
+                        <li class="hot-classify-li cl3"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">影视视频</a></li>
+                        <li class="hot-classify-li cl4"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">网上购物</a></li>
+                        <li class="hot-classify-li cl5"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">社区论坛</a></li>
+                        <li class="hot-classify-li cl6"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">游戏娱乐</a></li>
+                        <li class="hot-classify-li cl7"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">文学小说</a></li>
+                        <li class="hot-classify-li cl8"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">时尚美容</a></li>
+                        <li class="hot-classify-li cl9"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">生活服务</a></li>
+                        <li class="hot-classify-li cl10"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">投资理财</a></li>
+                        <li class="hot-classify-li cl11"><span class="hot-classify-icon"></span><a class="hot-classify-a" href="javascript:void(0)">酷站</a></li>
+                    </ul>
+                    <div id="we-hot-sites" class="sbar">
+                        <ul class="hot-sites-ul"></ul>
+                    </div>
+
+                </div>
+                <div class="we-con-item we-manual-ws">
+                    <div class="we-con-text">
+                        <div class="con-text-item">
+                            <span>输入网址：</span>
+                            <input class="we-con-url" type="text"/>
+                        </div>
+                        <div class="con-text-item">
+                            <span>网站名称：</span>
+                            <input class="we-con-title" type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="we-manual-list">
+                        <ul class="we-manual-op">
+                            <li class="manual-op-btn">经常访问</li>
+                            <li class="manual-op-btn">当前打开</li>
+                            <li class="manual-op-btn">收藏夹</li>
+                        </ul>
+
+                        <div class="manual-list-area">
+                            <ul class="manual-list-ul sbar"></ul>
+                        </div>
+
+                        <div class="manual-list-area">
+                            <ul class="manual-list-ul sbar"></ul>
+                        </div>
+
+                        <div class="manual-list-area">
+                            <embed view_type="fav_selector" type="application/sogou-native-widget-plugin" id="we-fav"></embed>
+                        </div>
+                    </div>
+
+                    <div class="we-manual-conf">
+                        <button class="manual-conf-btn conf-btn-exec">确认</button>
+                        <button class="manual-conf-btn conf-btn-cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var define = (function(dataMap) {
+        return function(data) {
+            for (var key in data) {
+                if (dataMap[key]) {
+                    window[dataMap[key]] = data;
+                    break;
+                }
+            }
+        };
+    })({
+        'sites': '_preset',
+        'hotSites': '_hotsites',
+        'list': '_sites_data',
+        'backgrounds': '_backgrounds'
+    });
+</script>
+<script src="module/preset.js"></script>
+<script src="module/hotsites.js"></script>
+<script src="module/sites-data.js"></script>
+<script src="module/backgrounds.js"></script>
+
+<script src="module/main.js"></script>
+
+</body>
+</html>
